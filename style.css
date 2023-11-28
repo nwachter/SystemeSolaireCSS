@@ -1,0 +1,226 @@
+body {
+    place-items: center;
+    min-height: 100vh;
+    min-width: 100vh;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.box {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    min-width: 100%;
+    height: 100%;
+}
+
+.soleil {
+    background: rgb(253, 205, 29);
+    background: radial-gradient(circle, rgba(253, 205, 29, 1) 5%, rgba(255, 241, 82, 1) 100%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: white 2px 2px 5px;
+}
+
+.planete-grise {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgb(87, 87, 87);
+    background: radial-gradient(circle, rgb(87, 87, 87) 5%, rgb(255, 250, 193) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: 0px -200px;
+    transform-origin: 13px 213px;
+    animation: rotation 6s linear infinite;
+    z-index: 1;
+}
+
+.planete-blanche {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgb(252, 255, 236);
+    position: absolute;
+    translate: 0px -140px;
+    transform-origin: 10px 150px;
+    position: absolute;
+    animation: rotation 3s linear infinite;
+}
+
+.planete-bleue {
+    width: 50px;
+    height: 50px;
+    background: radial-gradient(circle, rgb(70, 29, 253) 5%, rgb(82, 249, 255) 100%);
+    border-radius: 50%;
+    position: absolute;
+    translate: 0px -400px;
+    transform-origin: 25px 425px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: rotation 25s linear infinite;
+    z-index: 1;
+
+}
+
+.planete-rouge {
+    width: 40px;
+    height: 40px;
+    background: rgb(253, 29, 29);
+    background: radial-gradient(circle, rgb(253, 29, 29) 5%, rgb(255, 88, 82) 100%);
+    border-radius: 50%;
+    translate: 0px -250px;
+    transform-origin: 20px 270px;
+    position: absolute;
+    animation: rotation 10s linear infinite;
+    z-index: 1;
+}
+
+.planete-verte {
+    width: 70px;
+    height: 70px;
+    background: rgb(0, 199, 10);
+    background: radial-gradient(circle, rgb(48, 168, 18) 5%, rgb(146, 255, 82) 100%);
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    translate: 0px -300px;
+    transform-origin: 35px 335px;
+    animation: rotation 15s linear infinite;
+    z-index: 1;
+}
+
+
+
+.planete-rose {
+    width: 80px;
+    height: 80px;
+    background: rgb(253, 29, 29);
+    background: radial-gradient(circle, rgb(255, 167, 167) 5%, rgb(255, 88, 82) 100%);
+    border-radius: 50%;
+    position: absolute;
+    translate: 0px -480px;
+    transform-origin: 40px 520px;
+    animation: rotation 30s linear infinite;
+    z-index: 1;
+
+}
+
+.satellite2 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    translate: 0px -50px;
+    transform-origin: 6px 56px;
+    position: absolute;
+    animation: satellite 1s linear infinite;
+
+}
+
+.satellite1 {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: white;
+    translate: 0px -50px;
+    transform-origin: 7px 57px;
+    position: absolute;
+    animation: satellite 4s linear infinite;
+}
+
+.satellite3 {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: white;
+    position: absolute;
+}
+
+.satellite3.lent {
+    animation: satellite 3s linear infinite;
+    translate: 0px -85px;
+    transform-origin: 6px 91px;
+}
+
+.satellite3.rapide {
+    animation: satellite 1s linear infinite;
+    translate: 0px -70px;
+    transform-origin: 6px 76px;
+}
+
+div.orbite {
+    position: absolute;
+    border: 2px dashed rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    z-index: 0;
+    animation: rotation 20s linear infinite;
+
+}
+
+.orbite.orb-grise {
+    width: 400px;
+    height: 400px;
+}
+
+.orbite.orb-blanche {
+    width: 280px;
+    height: 280px;
+}
+
+.orbite.orb-bleue {
+    width: 800px;
+    height: 800px;
+}
+
+.orbite.orb-verte {
+    width: 600px;
+    height: 600px;
+}
+
+
+.orbite.orb-rouge {
+    width: 500px;
+    height: 500px;
+}
+
+.orbite.orb-rose {
+    width: 960px;
+    height: 960px;
+}
+
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes satellite {
+    0% {
+        transform: rotate(0) translate(30px, 30px);
+    }
+
+    100% {
+        transform: rotate(360deg) translate(30px, 30px);
+    }
+}
